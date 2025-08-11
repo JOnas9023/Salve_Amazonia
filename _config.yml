@@ -1,0 +1,45 @@
+# Configuração do GitHub Pages
+title: Pet Rescue Platform
+description: Plataforma completa para resgate e adoção de animais domésticos em situação de rua
+baseurl: ""
+url: "https://seu-usuario.github.io"
+
+# GitHub Pages settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Configurações do site
+author: Pet Rescue Team
+email: contato@petrescue.com
+lang: pt-BR
+
+# Social media
+github_username: seu-usuario
+twitter_username: petrescue_br
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - node_modules/
+  - client/node_modules/
+  - .git/
+  - .gitignore
+  - package.json
+  - package-lock.json
+  - server.js
+  - routes/
+  - middleware/
+  - database/
+  - uploads/
+  - logs/
+  - .env.example
+  - docker-compose.yml
+  - setup.js

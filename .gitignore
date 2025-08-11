@@ -1,0 +1,81 @@
+# Dependências
+node_modules/
+client/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory usado por ferramentas como istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# Build directories
+client/build/
+dist/
+build/
+
+# Uploads (manter estrutura, ignorar conteúdo)
+uploads/*
+!uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de banco de dados locais
+*.sqlite
+*.db
+
+# Certificates
+*.pem
+
+# Arquivos específicos do projeto
+client/.eslintcache
+
+# Arquivos de teste
+test-results/
+playwright-report/
