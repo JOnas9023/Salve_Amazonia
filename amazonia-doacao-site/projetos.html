@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - AmazôniaSalva | Iniciativas de Preservação</title>
+    <meta name="description" content="Conheça todos os projetos da AmazôniaSalva: reflorestamento, proteção da biodiversidade, apoio às comunidades. Veja o impacto em tempo real.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/logo.svg" alt="AmazôniaSalva" class="nav-logo">
+                    <span class="brand-text">AmazôniaSalva</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como Funciona</a></li>
+                    <li><a href="projetos.html" class="active">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="doacoes-completa.html" class="btn btn-primary">Doe Agora</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Nossos Projetos</h1>
+            <p class="page-hero-subtitle">
+                Conheça as iniciativas que estão transformando a Amazônia com sua contribuição
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Summary -->
+    <section class="projects-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">Projetos Ativos</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">123</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">78k</span>
+                        <span class="stat-label">Hectares Impactados</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">2.5k</span>
+                        <span class="stat-label">Famílias Beneficiadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h2>Filtrar Projetos</h2>
+                <div class="projects-search">
+                    <input type="search" placeholder="Buscar projetos..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Categoria:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="reflorestamento">Reflorestamento</button>
+                        <button class="filter-btn" data-filter="biodiversidade">Biodiversidade</button>
+                        <button class="filter-btn" data-filter="comunidades">Comunidades</button>
+                        <button class="filter-btn" data-filter="educacao">Educação</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-status="all">Todos</button>
+                        <button class="filter-btn" data-status="active">Ativos</button>
+                        <button class="filter-btn" data-status="completed">Concluídos</button>
+                        <button class="filter-btn" data-status="planning">Planejamento</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Região:</label>
+                    <select class="region-filter">
+                        <option value="all">Todas as Regiões</option>
+                        <option value="acre">Acre</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="para">Pará</option>
+                        <option value="rondonia">Rondônia</option>
+                        <option value="roraima">Roraima</option>
+                        <option value="amapa">Amapá</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-results">
+                <p><span id="projects-count">47</span> projetos encontrados</p>
+                <div class="sort-options">
+                    <label>Ordenar por:</label>
+                    <select class="sort-select">
+                        <option value="newest">Mais Recentes</option>
+                        <option value="oldest">Mais Antigos</option>
+                        <option value="progress">Progresso</option>
+                        <option value="funding">Necessidade de Recursos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projeto 1: Reflorestamento Rio Negro -->
+                <div class="project-card" data-category="reflorestamento" data-status="active" data-region="amazonas">
+                    <div class="project-image">
+                        <img src="images/projeto-rio-negro.jpg" alt="Reflorestamento Rio Negro">
+                        <div class="project-status active">Em Andamento</div>
+                        <div class="project-urgency high">Alta Prioridade</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-seedling"></i>
+                            <span>Reflorestamento</span>
+                        </div>
+                        <h3>Reflorestamento Rio Negro</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Amazonas - Região do Rio Negro
+                        </p>
+                        <p class="project-description">
+                            Plantio de 15.000 mudas de espécies nativas em 75 hectares de área degradada 
+                            próximo ao Rio Negro, beneficiando 5 comunidades ribeirinhas.
+                        </p>
+                        
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 68%</span>
+                                <span>R$ 68.000 / R$ 100.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-seedling"></i>
+                                <span>10.200 mudas plantadas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-users"></i>
+                                <span>5 comunidades beneficiadas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Conclusão: Mar/2025</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-primary">Apoiar Projeto</button>
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Escola Sustentável Kayapó -->
+                <div class="project-card" data-category="comunidades" data-status="completed" data-region="para">
+                    <div class="project-image">
+                        <img src="images/projeto-kayapo.jpg" alt="Escola Sustentável Kayapó">
+                        <div class="project-status completed">Concluído</div>
+                        <div class="project-badge success">
+                            <i class="fas fa-award"></i>
+                            Projeto Modelo
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-users"></i>
+                            <span>Comunidades</span>
+                        </div>
+                        <h3>Escola Sustentável Kayapó</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Pará - Terra Indígena Kayapó
+                        </p>
+                        <p class="project-description">
+                            Construção de escola sustentável com energia solar, captação de água da chuva 
+                            e horta comunitária para 150 crianças da comunidade Kayapó.
+                        </p>
+
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 100%</span>
+                                <span>R$ 120.000 / R$ 120.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill completed" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>150 crianças atendidas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-solar-panel"></i>
+                                <span>100% energia limpa</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Concluído em Dez/2024</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-outline">Ver Relatório Final</button>
+                            <button class="btn btn-outline">Galeria de Fotos</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Corredor Ecológico Tapajós -->
+                <div class="project-card" data-category="biodiversidade" data-status="planning" data-region="para">
+                    <div class="project-image">
+                        <img src="images/projeto-corredor-tapajos.jpg" alt="Corredor Ecológico Tapajós">
+                        <div class="project-status planning">Planejamento</div>
+                        <div class="project-urgency medium">Média Prioridade</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-leaf"></i>
+                            <span>Biodiversidade</span>
+                        </div>
+                        <h3>Corredor Ecológico Tapajós</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Pará - Região do Rio Tapajós
+                        </p>
+                        <p class="project-description">
+                            Criação de corredor ecológico de 300km para facilitar a migração de animais 
+                            silvestres, conectando áreas de preservação fragmentadas.
+                        </p>
+
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 15%</span>
+                                <span>R$ 45.000 / R$ 300.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-route"></i>
+                                <span>45km já mapeados</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-paw"></i>
+                                <span>80+ espécies beneficiadas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Início: Abr/2025</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-primary">Ser o Primeiro Apoiador</button>
+                            <button class="btn btn-outline">Ver Planejamento</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4: Educação Ambiental -->
+                <div class="project-card" data-category="educacao" data-status="active" data-region="acre">
+                    <div class="project-image">
+                        <img src="images/projeto-educacao-ambiental.jpg" alt="Educação Ambiental">
+                        <div class="project-status active">Em Andamento</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Educação</span>
+                        </div>
+                        <h3>Educação Ambiental Rural</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Acre - Região de Rio Branco
+                        </p>
+                        <p class="project-description">
+                            Programa de educação ambiental para 20 escolas rurais, capacitando professores 
+                            e criando material didático sobre preservação da Amazônia.
+                        </p>
+
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 42%</span>
+                                <span>R$ 21.000 / R$ 50.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 42%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-school"></i>
+                                <span>8 escolas já atendidas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>45 professores capacitados</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-child"></i>
+                                <span>1.200 alunos impactados</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-primary">Apoiar Projeto</button>
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5: Monitoramento Satelital -->
+                <div class="project-card" data-category="biodiversidade" data-status="active" data-region="amazonas">
+                    <div class="project-image">
+                        <img src="images/projeto-satelital.jpg" alt="Monitoramento Satelital">
+                        <div class="project-status active">Em Andamento</div>
+                        <div class="project-badge tech">
+                            <i class="fas fa-satellite"></i>
+                            Tecnologia
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>Monitoramento</span>
+                        </div>
+                        <h3>Monitoramento Satelital</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Amazonas - Múltiplas Regiões
+                        </p>
+                        <p class="project-description">
+                            Sistema de monitoramento por satélite para detectar desmatamento em tempo real 
+                            e acompanhar o crescimento de áreas reflorestadas.
+                        </p>
+
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 85%</span>
+                                <span>R$ 85.000 / R$ 100.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-globe"></i>
+                                <span>50k km² monitorados</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>120 alertas enviados</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>15 desmatamentos evitados</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-primary">Apoiar Projeto</button>
+                            <button class="btn btn-outline">Dashboard ao Vivo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6: Viveiro Comunitário -->
+                <div class="project-card" data-category="reflorestamento" data-status="active" data-region="rondonia">
+                    <div class="project-image">
+                        <img src="images/projeto-viveiro.jpg" alt="Viveiro Comunitário">
+                        <div class="project-status active">Em Andamento</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-seedling"></i>
+                            <span>Reflorestamento</span>
+                        </div>
+                        <h3>Viveiro Comunitário</h3>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Rondônia - Porto Velho
+                        </p>
+                        <p class="project-description">
+                            Instalação de viveiro comunitário para produção de mudas nativas, 
+                            gerando renda para famílias locais e suprindo projetos de reflorestamento.
+                        </p>
+
+                        <div class="project-progress">
+                            <div class="progress-header">
+                                <span>Progresso: 30%</span>
+                                <span>R$ 18.000 / R$ 60.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-seedling"></i>
+                                <span>5.000 mudas/mês capacidade</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-users"></i>
+                                <span>12 famílias empregadas</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Conclusão: Jun/2025</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="btn btn-primary">Apoiar Projeto</button>
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-section">
+                <button class="btn btn-outline btn-large" id="load-more">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Projetos
+                </button>
+                <p class="load-more-text">Mostrando 6 de 47 projetos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="impact-summary">
+        <div class="container">
+            <div class="impact-content">
+                <h2>Impacto Coletivo dos Projetos</h2>
+                <p>Veja os resultados alcançados com todos os nossos projetos combinados</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="impact-details">
+                            <span class="impact-number">1.847.392</span>
+                            <span class="impact-label">Mudas Plantadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="impact-details">
+                            <span class="impact-number">78.445</span>
+                            <span class="impact-label">Hectares Preservados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="impact-details">
+                            <span class="impact-number">2.547</span>
+                            <span class="impact-label">Famílias Beneficiadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="impact-details">
+                            <span class="impact-number">8.920</span>
+                            <span class="impact-label">Pessoas Educadas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Receba Atualizações dos Projetos</h3>
+                    <p>Cadastre-se para receber relatórios mensais sobre o progresso dos projetos que você apoia.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo.svg" alt="AmazôniaSalva" class="footer-logo">
+                        <span class="brand-text">AmazôniaSalva</span>
+                    </div>
+                    <p class="footer-description">
+                        Preservando a Amazônia com transparência e impacto real. 
+                        Cada doação faz a diferença para o futuro do planeta.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Apoio</h3>
+                    <ul class="footer-links">
+                        <li><a href="doacoes-completa.html">Como Doar</a></li>
+                        <li><a href="#">Seja Voluntário</a></li>
+                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html">Termos de Uso</a></li>
+                        <li><a href="transparencia.html">Relatórios Financeiros</a></li>
+                        <li><a href="#">Certificações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AmazôniaSalva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Funcionalidade específica da página de projetos
+        document.addEventListener('DOMContentLoaded', function() {
+            initProjectFilters();
+            initSearchFunctionality();
+            initLoadMore();
+        });
+
+        function initProjectFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from siblings
+                    this.parentNode.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.dataset.filter || this.dataset.status;
+                    const filterType = this.dataset.filter ? 'category' : 'status';
+
+                    // Filter projects
+                    let visibleCount = 0;
+                    projectCards.forEach(card => {
+                        const shouldShow = filter === 'all' || card.dataset[filterType] === filter;
+                        card.style.display = shouldShow ? 'block' : 'none';
+                        if (shouldShow) visibleCount++;
+                    });
+
+                    // Update count
+                    document.getElementById('projects-count').textContent = visibleCount;
+                });
+            });
+        }
+
+        function initSearchFunctionality() {
+            const searchInput = document.querySelector('.search-input');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let visibleCount = 0;
+
+                projectCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('.project-description').textContent.toLowerCase();
+                    const shouldShow = title.includes(searchTerm) || description.includes(searchTerm);
+                    
+                    card.style.display = shouldShow ? 'block' : 'none';
+                    if (shouldShow) visibleCount++;
+                });
+
+                document.getElementById('projects-count').textContent = visibleCount;
+            });
+        }
+
+        function initLoadMore() {
+            const loadMoreBtn = document.getElementById('load-more');
+            
+            loadMoreBtn.addEventListener('click', function() {
+                // Simular carregamento de mais projetos
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+                
+                setTimeout(() => {
+                    showNotification('Mais projetos carregados! 📊', 'info');
+                    this.innerHTML = '<i class="fas fa-plus"></i> Carregar Mais Projetos';
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>

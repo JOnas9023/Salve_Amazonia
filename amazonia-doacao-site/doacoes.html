@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações - Amazônia Viva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-leaf nav-icon"></i>
+                    <span class="brand-text">Amazônia Viva</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como Funciona</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="doacoes.html" class="btn btn-primary active">Doe Agora</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1>Faça sua Doação</h1>
+                    <p class="page-hero-subtitle">
+                        Sua contribuição faz a diferença na preservação da Amazônia. 
+                        Cada real doado é aplicado com transparência total.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Form -->
+        <section class="donation-section">
+            <div class="container">
+                <div class="donation-content">
+                    <div class="donation-form-container">
+                        <div class="donation-header">
+                            <h2><i class="fas fa-heart"></i> Contribua com a Amazônia</h2>
+                            <p>Escolha o valor da sua doação e a forma de pagamento que preferir.</p>
+                        </div>
+
+                        <form id="donationForm" class="donation-form">
+                            <!-- Tipo de Doação -->
+                            <div class="form-section">
+                                <h3>Tipo de Doação</h3>
+                                <div class="donation-type-options">
+                                    <label class="option-card">
+                                        <input type="radio" name="donationType" value="individual" checked>
+                                        <div class="card-content">
+                                            <i class="fas fa-user"></i>
+                                            <h4>Pessoa Física</h4>
+                                            <p>Doação individual</p>
+                                        </div>
+                                    </label>
+                                    <label class="option-card">
+                                        <input type="radio" name="donationType" value="corporate">
+                                        <div class="card-content">
+                                            <i class="fas fa-building"></i>
+                                            <h4>Pessoa Jurídica</h4>
+                                            <p>Compensação de carbono</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Valor da Doação -->
+                            <div class="form-section">
+                                <h3>Valor da Doação</h3>
+                                <div class="amount-options">
+                                    <button type="button" class="amount-btn" data-amount="25">R$ 25</button>
+                                    <button type="button" class="amount-btn" data-amount="50">R$ 50</button>
+                                    <button type="button" class="amount-btn" data-amount="100">R$ 100</button>
+                                    <button type="button" class="amount-btn" data-amount="200">R$ 200</button>
+                                    <button type="button" class="amount-btn" data-amount="500">R$ 500</button>
+                                    <button type="button" class="amount-btn" data-amount="other">Outro valor</button>
+                                </div>
+                                <div class="custom-amount">
+                                    <label for="customAmount">Valor personalizado (R$)</label>
+                                    <input type="number" id="customAmount" name="amount" min="5" step="0.01" placeholder="0,00">
+                                </div>
+                            </div>
+
+                            <!-- Frequência -->
+                            <div class="form-section">
+                                <h3>Frequência</h3>
+                                <div class="frequency-options">
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="once" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="text">Doação única</span>
+                                    </label>
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="monthly">
+                                        <span class="checkmark"></span>
+                                        <span class="text">Mensal (recorrente)</span>
+                                        <span class="badge">Recomendado</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Destino da Doação -->
+                            <div class="form-section">
+                                <h3>Destinar Doação Para</h3>
+                                <select name="destination" class="form-select">
+                                    <option value="general">Onde há maior necessidade</option>
+                                    <option value="reforestation">Reflorestamento</option>
+                                    <option value="biodiversity">Proteção da Biodiversidade</option>
+                                    <option value="communities">Apoio às Comunidades</option>
+                                    <option value="research">Pesquisa e Monitoramento</option>
+                                </select>
+                            </div>
+
+                            <!-- Dados Pessoais -->
+                            <div class="form-section" id="personalDataSection">
+                                <h3>Seus Dados</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="fullName">Nome Completo *</label>
+                                        <input type="text" id="fullName" name="fullName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefone</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="document">CPF/CNPJ *</label>
+                                        <input type="text" id="document" name="document" required>
+                                    </div>
+                                </div>
+                                
+                                <!-- Endereço -->
+                                <div class="address-section">
+                                    <h4>Endereço</h4>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="zipCode">CEP</label>
+                                            <input type="text" id="zipCode" name="zipCode" placeholder="00000-000">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="street">Rua</label>
+                                            <input type="text" id="street" name="street">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="number">Número</label>
+                                            <input type="text" id="number" name="number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">Cidade</label>
+                                            <input type="text" id="city" name="city">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state">Estado</label>
+                                            <select id="state" name="state">
+                                                <option value="">Selecione</option>
+                                                <option value="AC">Acre</option>
+                                                <option value="AL">Alagoas</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="PR">Paraná</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="RO">Rondônia</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="TO">Tocantins</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Forma de Pagamento -->
+                            <div class="form-section">
+                                <h3>Forma de Pagamento</h3>
+                                <div class="payment-methods">
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="pix" checked>
+                                        <div class="method-content">
+                                            <i class="fas fa-qrcode"></i>
+                                            <span>PIX</span>
+                                            <small>Instantâneo e gratuito</small>
+                                        </div>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="credit">
+                                        <div class="method-content">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Cartão de Crédito</span>
+                                            <small>Até 12x sem juros</small>
+                                        </div>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="debit">
+                                        <div class="method-content">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Cartão de Débito</span>
+                                            <small>À vista</small>
+                                        </div>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="paymentMethod" value="boleto">
+                                        <div class="method-content">
+                                            <i class="fas fa-barcode"></i>
+                                            <span>Boleto</span>
+                                            <small>Vencimento em 3 dias</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Dados do Cartão (oculto por padrão) -->
+                            <div class="form-section" id="cardDataSection" style="display: none;">
+                                <h3>Dados do Cartão</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Número do Cartão</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardName">Nome no Cartão</label>
+                                        <input type="text" id="cardName" name="cardName" placeholder="Como está impresso no cartão">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardExpiry">Validade</label>
+                                        <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardCvv">CVV</label>
+                                        <input type="text" id="cardCvv" name="cardCvv" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                                
+                                <!-- Parcelamento (apenas para crédito) -->
+                                <div class="installments-section" id="installmentsSection" style="display: none;">
+                                    <label for="installments">Parcelamento</label>
+                                    <select id="installments" name="installments">
+                                        <option value="1">1x sem juros</option>
+                                        <option value="2">2x sem juros</option>
+                                        <option value="3">3x sem juros</option>
+                                        <option value="6">6x sem juros</option>
+                                        <option value="12">12x sem juros</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Termos e Condições -->
+                            <div class="form-section">
+                                <div class="terms-section">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="agreeTerms" required>
+                                        <span class="checkmark"></span>
+                                        <span class="text">
+                                            Concordo com os 
+                                            <a href="termos.html" target="_blank">Termos de Uso</a> e 
+                                            <a href="privacidade.html" target="_blank">Política de Privacidade</a>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="agreeNewsletter">
+                                        <span class="checkmark"></span>
+                                        <span class="text">
+                                            Desejo receber novidades e relatórios por email
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Botão de Submissão -->
+                            <div class="form-section">
+                                <button type="submit" class="btn btn-primary btn-large btn-donate" disabled>
+                                    <i class="fas fa-heart"></i>
+                                    <span class="btn-text">Fazer Doação</span>
+                                    <span class="btn-amount">R$ 0,00</span>
+                                </button>
+                                <div class="security-info">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Pagamento 100% seguro e criptografado</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar com informações -->
+                    <div class="donation-sidebar">
+                        <!-- Resumo da Doação -->
+                        <div class="donation-summary">
+                            <h3>Resumo da Doação</h3>
+                            <div class="summary-item">
+                                <span>Valor:</span>
+                                <span class="summary-amount">R$ 0,00</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Frequência:</span>
+                                <span class="summary-frequency">Única</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Destino:</span>
+                                <span class="summary-destination">Maior necessidade</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total:</span>
+                                <span class="summary-total">R$ 0,00</span>
+                            </div>
+                        </div>
+
+                        <!-- Impacto da Doação -->
+                        <div class="impact-preview">
+                            <h3>Seu Impacto</h3>
+                            <div class="impact-items">
+                                <div class="impact-item">
+                                    <i class="fas fa-seedling"></i>
+                                    <div class="impact-text">
+                                        <span class="impact-number" data-value="0">0</span>
+                                        <span class="impact-label">árvores plantadas</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="impact-text">
+                                        <span class="impact-number" data-value="0">0</span>
+                                        <span class="impact-label">m² de floresta protegida</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-users"></i>
+                                    <div class="impact-text">
+                                        <span class="impact-number" data-value="0">0</span>
+                                        <span class="impact-label">famílias beneficiadas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certificado -->
+                        <div class="certificate-info">
+                            <h3>Certificado Digital</h3>
+                            <p>Após a confirmação do pagamento, você receberá automaticamente seu certificado "Amigo da Amazônia".</p>
+                            <div class="certificate-levels">
+                                <div class="level-item">
+                                    <span class="level-badge">Protetor</span>
+                                    <span>R$ 50+</span>
+                                </div>
+                                <div class="level-item">
+                                    <span class="level-badge">Guardião</span>
+                                    <span>R$ 200+</span>
+                                </div>
+                                <div class="level-item">
+                                    <span class="level-badge">Embaixador</span>
+                                    <span>R$ 1.000+</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transparência -->
+                        <div class="transparency-info">
+                            <h3>100% Transparente</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Relatórios mensais</li>
+                                <li><i class="fas fa-check"></i> Rastreamento em tempo real</li>
+                                <li><i class="fas fa-check"></i> Auditoria independente</li>
+                                <li><i class="fas fa-check"></i> Certificação digital</li>
+                            </ul>
+                        </div>
+
+                        <!-- Segurança -->
+                        <div class="security-badges">
+                            <div class="security-badge">
+                                <i class="fas fa-lock"></i>
+                                <span>SSL Seguro</span>
+                            </div>
+                            <div class="security-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>PCI Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donors Wall -->
+        <section class="donors-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Últimas Doações</h2>
+                    <p>Veja quem está fazendo a diferença pela Amazônia</p>
+                </div>
+                <div class="donors-wall">
+                    <div class="donor-item">
+                        <div class="donor-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="donor-info">
+                            <span class="donor-name">Maria S.</span>
+                            <span class="donor-amount">doou R$ 100,00</span>
+                            <span class="donor-time">há 2 minutos</span>
+                        </div>
+                    </div>
+                    <div class="donor-item">
+                        <div class="donor-avatar">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="donor-info">
+                            <span class="donor-name">EcoTech Ltda</span>
+                            <span class="donor-amount">doou R$ 5.000,00</span>
+                            <span class="donor-time">há 15 minutos</span>
+                        </div>
+                    </div>
+                    <div class="donor-item">
+                        <div class="donor-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="donor-info">
+                            <span class="donor-name">João P.</span>
+                            <span class="donor-amount">doou R$ 50,00</span>
+                            <span class="donor-time">há 32 minutos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Doações -->
+        <section class="donation-faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dúvidas Frequentes sobre Doações</h2>
+                    <p>Esclarecemos as principais questões sobre o processo de doação</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Qual o valor mínimo para doar?
+                        </h3>
+                        <p class="faq-answer">
+                            Não há valor mínimo! Aceitamos qualquer quantia a partir de R$ 5,00. 
+                            Toda contribuição, por menor que seja, faz diferença para a preservação da Amazônia.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Como funciona a doação recorrente?
+                        </h3>
+                        <p class="faq-answer">
+                            Na doação mensal, o valor é debitado automaticamente todo mês no mesmo dia. 
+                            Você pode cancelar a qualquer momento sem custos adicionais.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Meus dados estão seguros?
+                        </h3>
+                        <p class="faq-answer">
+                            Sim! Utilizamos criptografia SSL e somos certificados PCI Compliance. 
+                            Seus dados pessoais e de pagamento são protegidos pelos mais altos padrões de segurança.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Quando recebo o certificado?
+                        </h3>
+                        <p class="faq-answer">
+                            O certificado digital "Amigo da Amazônia" é gerado automaticamente após a confirmação 
+                            do pagamento e enviado por email em até 24 horas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-leaf footer-icon"></i>
+                        <span class="brand-text">Amazônia Viva</span>
+                    </div>
+                    <p class="footer-description">
+                        Plataforma dedicada à preservação da Amazônia através de doações transparentes 
+                        e projetos de impacto real.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="como-funciona.html">Como Funciona</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@amazoniaviva.org</p>
+                        <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Certificações</h3>
+                    <div class="certifications">
+                        <img src="images/cert-ong.png" alt="Certificação ONG" class="cert-logo">
+                        <img src="images/cert-transparency.png" alt="Certificação Transparência" class="cert-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Amazônia Viva. Todos os direitos reservados.</p>
+                    <div class="footer-legal">
+                        <a href="privacidade.html">Política de Privacidade</a>
+                        <a href="termos.html">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/donation.js"></script>
+</body>
+</html>

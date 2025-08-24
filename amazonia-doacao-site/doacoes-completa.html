@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Doação - AmazôniaSalva</title>
+    <meta name="description" content="Faça sua doação para preservar a Amazônia. PIX, cartão ou boleto. Transparência total e certificado digital incluído.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-leaf nav-icon"></i>
+                    <span class="brand-text">AmazôniaSalva</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como Funciona</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="doacoes-completa.html" class="btn btn-primary active">Doe Agora</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Faça sua Doação</h1>
+            <p class="page-hero-subtitle">
+                Sua contribuição salva vidas e preserva o futuro do planeta. 
+                Escolha o valor e acompanhe o impacto em tempo real.
+            </p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donations-page">
+        <div class="container">
+            <!-- Security badges -->
+            <div class="security-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Transações 100% Seguras</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certificado Digital Incluso</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-eye"></i>
+                    <span>Total Transparência</span>
+                </div>
+            </div>
+
+            <div class="donation-form-container">
+                <!-- Donation Type Tabs -->
+                <div class="donation-type-tabs">
+                    <button class="tab-btn active" data-tab="individual">
+                        <i class="fas fa-user"></i>
+                        Pessoa Física
+                    </button>
+                    <button class="tab-btn" data-tab="corporate">
+                        <i class="fas fa-building"></i>
+                        Pessoa Jurídica
+                    </button>
+                </div>
+
+                <!-- Individual Donation -->
+                <div class="tab-content active" id="individual">
+                    <form class="donation-form" id="individualDonationForm">
+                        <!-- Step 1: Amount -->
+                        <div class="form-step active" data-step="1">
+                            <h3><i class="fas fa-hand-holding-heart"></i> Escolha o Valor</h3>
+                            
+                            <div class="amount-selector">
+                                <div class="preset-amounts">
+                                    <button type="button" class="amount-btn" data-amount="25">R$ 25</button>
+                                    <button type="button" class="amount-btn" data-amount="50">R$ 50</button>
+                                    <button type="button" class="amount-btn active" data-amount="100">R$ 100</button>
+                                    <button type="button" class="amount-btn" data-amount="250">R$ 250</button>
+                                    <button type="button" class="amount-btn" data-amount="500">R$ 500</button>
+                                    <button type="button" class="amount-btn custom">Outro Valor</button>
+                                </div>
+                                
+                                <input type="number" class="custom-amount" placeholder="Digite o valor desejado" min="10" style="display: none;">
+                            </div>
+
+                            <div class="frequency-selector">
+                                <h4>Frequência da Doação:</h4>
+                                <div class="frequency-options">
+                                    <label class="radio-card">
+                                        <input type="radio" name="frequency" value="once" checked>
+                                        <div class="card-content">
+                                            <i class="fas fa-heart"></i>
+                                            <span>Doação Única</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="radio-card">
+                                        <input type="radio" name="frequency" value="monthly">
+                                        <div class="card-content">
+                                            <i class="fas fa-sync-alt"></i>
+                                            <span>Mensal</span>
+                                            <small>Contribuição regular</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="radio-card">
+                                        <input type="radio" name="frequency" value="yearly">
+                                        <div class="card-content">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Anual</span>
+                                            <small>Desconto de 5%</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Impact Preview -->
+                            <div class="impact-calculator">
+                                <h4>Seu Impacto com R$ <span id="selectedAmount">100</span>:</h4>
+                                <div class="impact-grid">
+                                    <div class="impact-item">
+                                        <i class="fas fa-seedling"></i>
+                                        <span id="treesCount">20</span>
+                                        <small>mudas plantadas</small>
+                                    </div>
+                                    <div class="impact-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span id="educationDays">1</span>
+                                        <small>dia de educação</small>
+                                    </div>
+                                    <div class="impact-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span id="protectionArea">500</span>
+                                        <small>m² protegidos</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-large next-step">
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Step 2: Personal Info -->
+                        <div class="form-step" data-step="2">
+                            <h3><i class="fas fa-user"></i> Seus Dados</h3>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullName">Nome Completo *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cpf">CPF *</label>
+                                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="newsletter" value="yes" checked>
+                                    Desejo receber atualizações sobre os projetos por e-mail
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="anonymous" value="yes">
+                                    Fazer doação anônima (nome não aparecerá nos relatórios públicos)
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline prev-step">
+                                    <i class="fas fa-arrow-left"></i> Voltar
+                                </button>
+                                <button type="button" class="btn btn-primary btn-large next-step">
+                                    Continuar <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment Method -->
+                        <div class="form-step" data-step="3">
+                            <h3><i class="fas fa-credit-card"></i> Forma de Pagamento</h3>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-card">
+                                    <input type="radio" name="paymentMethod" value="pix" checked>
+                                    <div class="payment-content">
+                                        <i class="fas fa-qrcode"></i>
+                                        <span>PIX</span>
+                                        <small>Aprovação instantânea</small>
+                                        <div class="payment-badge">Recomendado</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-card">
+                                    <input type="radio" name="paymentMethod" value="credit">
+                                    <div class="payment-content">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Cartão de Crédito</span>
+                                        <small>Até 12x sem juros</small>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-card">
+                                    <input type="radio" name="paymentMethod" value="debit">
+                                    <div class="payment-content">
+                                        <i class="fas fa-university"></i>
+                                        <span>Débito Online</span>
+                                        <small>Desconto direto na conta</small>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-card">
+                                    <input type="radio" name="paymentMethod" value="boleto">
+                                    <div class="payment-content">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Boleto</span>
+                                        <small>Vencimento em 3 dias úteis</small>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Credit Card Details (shown when credit card is selected) -->
+                            <div class="credit-card-form" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group span-2">
+                                        <label for="cardNumber">Número do Cartão *</label>
+                                        <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="expiryDate">Validade *</label>
+                                        <input type="text" id="expiryDate" placeholder="MM/AA">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                    
+                                    <div class="form-group span-2">
+                                        <label for="cardName">Nome no Cartão *</label>
+                                        <input type="text" id="cardName" placeholder="Como está escrito no cartão">
+                                    </div>
+                                    
+                                    <div class="form-group span-2">
+                                        <label for="installments">Parcelamento</label>
+                                        <select id="installments">
+                                            <option value="1">À vista</option>
+                                            <option value="2">2x sem juros</option>
+                                            <option value="3">3x sem juros</option>
+                                            <option value="6">6x sem juros</option>
+                                            <option value="12">12x sem juros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline prev-step">
+                                    <i class="fas fa-arrow-left"></i> Voltar
+                                </button>
+                                <button type="button" class="btn btn-primary btn-large next-step">
+                                    Revisar Doação <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Review -->
+                        <div class="form-step" data-step="4">
+                            <h3><i class="fas fa-check-circle"></i> Revisar sua Doação</h3>
+                            
+                            <div class="donation-summary">
+                                <div class="summary-card">
+                                    <h4>Resumo da Doação</h4>
+                                    
+                                    <div class="summary-row">
+                                        <span>Valor:</span>
+                                        <strong>R$ <span id="reviewAmount">100,00</span></strong>
+                                    </div>
+                                    
+                                    <div class="summary-row">
+                                        <span>Frequência:</span>
+                                        <span id="reviewFrequency">Doação única</span>
+                                    </div>
+                                    
+                                    <div class="summary-row">
+                                        <span>Forma de pagamento:</span>
+                                        <span id="reviewPayment">PIX</span>
+                                    </div>
+                                    
+                                    <div class="summary-row">
+                                        <span>Destinação:</span>
+                                        <span>97% para projetos, 3% administração</span>
+                                    </div>
+                                    
+                                    <hr>
+                                    
+                                    <div class="summary-row total">
+                                        <span>Total:</span>
+                                        <strong>R$ <span id="reviewTotal">100,00</span></strong>
+                                    </div>
+                                </div>
+                                
+                                <div class="summary-impact">
+                                    <h4>Seu Impacto Estimado</h4>
+                                    <div class="impact-preview-grid">
+                                        <div class="impact-preview-item">
+                                            <i class="fas fa-seedling"></i>
+                                            <span><span id="reviewTrees">20</span> mudas</span>
+                                        </div>
+                                        <div class="impact-preview-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <span><span id="reviewEducation">1</span> dia educação</span>
+                                        </div>
+                                        <div class="impact-preview-item">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span><span id="reviewProtection">500</span>m² protegidos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="terms-acceptance">
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="terms" required>
+                                    <div class="checkbox-content">
+                                        <i class="fas fa-file-contract"></i>
+                                        <div>
+                                            <span>Aceito os <a href="#" target="_blank">termos de uso</a> e <a href="#" target="_blank">política de privacidade</a></span>
+                                            <small>Li e concordo com as condições de doação e uso dos dados</small>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline prev-step">
+                                    <i class="fas fa-arrow-left"></i> Voltar
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-heart"></i> Confirmar Doação
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Corporate Donation -->
+                <div class="tab-content" id="corporate">
+                    <div class="corporate-info">
+                        <h3>Doações Corporativas</h3>
+                        <p>Para empresas que desejam contribuir com a preservação da Amazônia e obter benefícios fiscais e de marketing.</p>
+                        
+                        <div class="corporate-benefits">
+                            <div class="benefit-card">
+                                <i class="fas fa-calculator"></i>
+                                <h4>Dedução Fiscal</h4>
+                                <p>Deduza até 2% do imposto de renda devido com sua doação.</p>
+                            </div>
+                            
+                            <div class="benefit-card">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Compensação de Carbono</h4>
+                                <p>Neutralize a pegada de carbono da sua empresa através de nossos projetos.</p>
+                            </div>
+                            
+                            <div class="benefit-card">
+                                <i class="fas fa-award"></i>
+                                <h4>Certificação</h4>
+                                <p>Receba certificados de sustentabilidade para divulgar seu compromisso ambiental.</p>
+                            </div>
+                            
+                            <div class="benefit-card">
+                                <i class="fas fa-users"></i>
+                                <h4>Engajamento</h4>
+                                <p>Envolva seus colaboradores em ações de preservação ambiental.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="corporate-contact">
+                            <h4>Entre em Contato</h4>
+                            <p>Nossa equipe especializada em parcerias corporativas entrará em contato para criar uma proposta personalizada.</p>
+                            
+                            <form class="corporate-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="companyName">Nome da Empresa *</label>
+                                        <input type="text" id="companyName" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cnpj">CNPJ *</label>
+                                        <input type="text" id="cnpj" required placeholder="00.000.000/0000-00">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="contactName">Nome do Contato *</label>
+                                        <input type="text" id="contactName" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="contactEmail">E-mail *</label>
+                                        <input type="email" id="contactEmail" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="contactPhone">Telefone *</label>
+                                        <input type="tel" id="contactPhone" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="annualRevenue">Faturamento Anual</label>
+                                        <select id="annualRevenue">
+                                            <option value="">Selecione</option>
+                                            <option value="micro">Até R$ 360 mil (Microempresa)</option>
+                                            <option value="small">R$ 360 mil - R$ 4,8 mi (Pequena)</option>
+                                            <option value="medium">R$ 4,8 mi - R$ 300 mi (Média)</option>
+                                            <option value="large">Acima de R$ 300 mi (Grande)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="interests">Áreas de Interesse (selecione todas que se aplicam)</label>
+                                    <div class="checkbox-grid">
+                                        <label><input type="checkbox" value="carbon"> Compensação de Carbono</label>
+                                        <label><input type="checkbox" value="reforestation"> Reflorestamento</label>
+                                        <label><input type="checkbox" value="education"> Educação Ambiental</label>
+                                        <label><input type="checkbox" value="communities"> Apoio às Comunidades</label>
+                                        <label><input type="checkbox" value="biodiversity"> Proteção da Biodiversidade</label>
+                                        <label><input type="checkbox" value="sponsorship"> Patrocínio de Projetos</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Mensagem Adicional</label>
+                                    <textarea id="message" rows="4" placeholder="Conte-nos mais sobre seus objetivos e como podemos ajudar..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-paper-plane"></i> Solicitar Proposta
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Segurança Garantida</h4>
+                    <p>Suas informações e pagamentos são protegidos por criptografia SSL 256-bit.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <i class="fas fa-eye"></i>
+                    <h4>100% Transparente</h4>
+                    <p>Acompanhe exatamente como sua doação está sendo utilizada em tempo real.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Certificado Incluso</h4>
+                    <p>Receba seu certificado digital "Amigo da Amazônia" automaticamente.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>Suporte Dedicado</h4>
+                    <p>Nossa equipe está disponível para esclarecer qualquer dúvida sobre sua doação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes sobre Doações</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Como posso acompanhar o uso da minha doação?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Após sua doação, você receberá um link para acompanhar em tempo real como os recursos estão sendo aplicados. Enviamos relatórios mensais com fotos e dados dos projetos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Posso deduzir minha doação do imposto de renda?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Somos uma organização certificada e suas doações podem ser deduzidas conforme legislação vigente. Enviaremos todos os documentos necessários para a declaração.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Quanto da minha doação vai efetivamente para os projetos?</span>
+                    </div>
+                    <div class="faq-answer">
+                        97% de toda doação vai diretamente para os projetos. Apenas 3% são utilizados para custos administrativos e operacionais mínimos da organização.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Como funciona a doação recorrente?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Na doação recorrente, o valor escolhido é automaticamente debitado mensalmente ou anualmente. Você pode cancelar a qualquer momento através do seu painel do doador.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>É seguro fazer doações online?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutamente. Utilizamos as mais avançadas tecnologias de segurança, incluindo criptografia SSL e parceiros de pagamento certificados PCI-DSS.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Posso fazer uma doação anônima?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim, oferecemos a opção de doação anônima. Seu nome não aparecerá em relatórios públicos, mas ainda receberá todas as atualizações sobre o impacto da sua contribuição.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-leaf footer-icon"></i>
+                        <span class="brand-text">AmazôniaSalva</span>
+                    </div>
+                    <p class="footer-description">
+                        Preservando a Amazônia com transparência e impacto real. 
+                        Cada doação faz a diferença para o futuro do planeta.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Apoio</h3>
+                    <ul class="footer-links">
+                        <li><a href="doacoes-completa.html">Como Doar</a></li>
+                        <li><a href="#">Seja Voluntário</a></li>
+                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Relatórios Financeiros</a></li>
+                        <li><a href="#">Certificações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AmazôniaSalva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/donation.js"></script>
+</body>
+</html>
