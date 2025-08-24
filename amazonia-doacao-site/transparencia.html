@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparência - AmazôniaSalva | Relatórios e Prestação de Contas</title>
+    <meta name="description" content="Acesso total aos nossos relatórios financeiros, auditorias e prestação de contas. Transparência completa no uso das doações para preservação da Amazônia.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/logo.svg" alt="AmazôniaSalva" class="nav-logo">
+                    <span class="brand-text">AmazôniaSalva</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como Funciona</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="transparencia.html" class="active">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="doacoes-completa.html" class="btn btn-primary">Doe Agora</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Transparência Total</h1>
+            <p class="page-hero-subtitle">
+                Prestação de contas completa: cada real doado é rastreado e relatado publicamente
+            </p>
+            
+            <div class="transparency-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-eye"></i>
+                    <span>100% Transparente</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Auditoria Externa</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Relatórios Mensais</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Selo de Confiança</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Dashboard -->
+    <section class="financial-dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Dashboard Financeiro - 2024</h2>
+                <p>Acompanhe em tempo real como utilizamos os recursos</p>
+                
+                <div class="period-selector">
+                    <button class="period-btn active" data-period="2024">2024</button>
+                    <button class="period-btn" data-period="2023">2023</button>
+                    <button class="period-btn" data-period="2022">2022</button>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">R$ 2.347.892</span>
+                        <span class="stat-label">Total Arrecadado</span>
+                        <span class="stat-change positive">+23% vs 2023</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">R$ 2.112.503</span>
+                        <span class="stat-label">Aplicado em Projetos</span>
+                        <span class="stat-change neutral">90% do total</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">R$ 211.250</span>
+                        <span class="stat-label">Custos Operacionais</span>
+                        <span class="stat-change neutral">9% do total</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number">R$ 24.139</span>
+                        <span class="stat-label">Reserva de Emergência</span>
+                        <span class="stat-change positive">1% do total</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Distribution -->
+    <section class="resource-distribution">
+        <div class="container">
+            <div class="distribution-header">
+                <h2>Distribuição dos Recursos 2024</h2>
+                <p>Veja exatamente onde cada real foi investido</p>
+            </div>
+
+            <div class="distribution-content">
+                <div class="chart-container">
+                    <div class="donut-chart" id="distribution-chart">
+                        <!-- Chart placeholder - seria implementado com Chart.js -->
+                        <div class="chart-center">
+                            <span class="chart-total">R$ 2.3M</span>
+                            <span class="chart-label">Total 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="distribution-legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #1B5E20;"></div>
+                        <div class="legend-details">
+                            <span class="legend-label">Reflorestamento</span>
+                            <span class="legend-value">R$ 985.673 (42%)</span>
+                        </div>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #2E7D32;"></div>
+                        <div class="legend-details">
+                            <span class="legend-label">Proteção da Biodiversidade</span>
+                            <span class="legend-value">R$ 632.526 (27%)</span>
+                        </div>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4CAF50;"></div>
+                        <div class="legend-details">
+                            <span class="legend-label">Apoio às Comunidades</span>
+                            <span class="legend-value">R$ 494.304 (21%)</span>
+                        </div>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #66BB6A;"></div>
+                        <div class="legend-details">
+                            <span class="legend-label">Custos Operacionais</span>
+                            <span class="legend-value">R$ 211.250 (9%)</span>
+                        </div>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #81C784;"></div>
+                        <div class="legend-details">
+                            <span class="legend-label">Reserva de Emergência</span>
+                            <span class="legend-value">R$ 24.139 (1%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Reports -->
+    <section class="monthly-reports">
+        <div class="container">
+            <div class="reports-header">
+                <h2>Relatórios Mensais</h2>
+                <p>Baixe nossos relatórios detalhados de cada mês</p>
+            </div>
+
+            <div class="reports-grid">
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="report-date">
+                            <span class="month">Dezembro 2024</span>
+                            <span class="status published">Publicado</span>
+                        </div>
+                    </div>
+                    <div class="report-content">
+                        <h3>Relatório Financeiro Dezembro</h3>
+                        <p>Balanço completo do mês com detalhamento de todas as receitas e despesas.</p>
+                        
+                        <div class="report-stats">
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-down text-green"></i>
+                                <span>R$ 234.567 recebidos</span>
+                            </div>
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-up text-orange"></i>
+                                <span>R$ 221.890 investidos</span>
+                            </div>
+                        </div>
+
+                        <div class="report-actions">
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i> Baixar PDF
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="report-date">
+                            <span class="month">Novembro 2024</span>
+                            <span class="status published">Publicado</span>
+                        </div>
+                    </div>
+                    <div class="report-content">
+                        <h3>Relatório Financeiro Novembro</h3>
+                        <p>Detalhamento das atividades financeiras e resultados dos projetos em andamento.</p>
+                        
+                        <div class="report-stats">
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-down text-green"></i>
+                                <span>R$ 198.432 recebidos</span>
+                            </div>
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-up text-orange"></i>
+                                <span>R$ 189.203 investidos</span>
+                            </div>
+                        </div>
+
+                        <div class="report-actions">
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i> Baixar PDF
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="report-date">
+                            <span class="month">Outubro 2024</span>
+                            <span class="status published">Publicado</span>
+                        </div>
+                    </div>
+                    <div class="report-content">
+                        <h3>Relatório Financeiro Outubro</h3>
+                        <p>Prestação de contas completa incluindo resultados de auditoria externa.</p>
+                        
+                        <div class="report-stats">
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-down text-green"></i>
+                                <span>R$ 287.651 recebidos</span>
+                            </div>
+                            <div class="report-stat">
+                                <i class="fas fa-arrow-up text-orange"></i>
+                                <span>R$ 275.439 investidos</span>
+                            </div>
+                        </div>
+
+                        <div class="report-actions">
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i> Baixar PDF
+                            </button>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-eye"></i> Visualizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="report-date">
+                            <span class="month">Janeiro 2025</span>
+                            <span class="status pending">Em Preparação</span>
+                        </div>
+                    </div>
+                    <div class="report-content">
+                        <h3>Relatório Janeiro 2025</h3>
+                        <p>Relatório em preparação. Será publicado até o dia 15 de fevereiro.</p>
+                        
+                        <div class="report-stats">
+                            <div class="report-stat">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span>Dados sendo compilados</span>
+                            </div>
+                        </div>
+
+                        <div class="report-actions">
+                            <button class="btn btn-outline btn-sm" disabled>
+                                <i class="fas fa-clock"></i> Aguardar Publicação
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more-reports">
+                <button class="btn btn-outline btn-large">
+                    <i class="fas fa-history"></i>
+                    Ver Relatórios Anteriores
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <div class="cert-header">
+                <h2>Certificações e Auditorias</h2>
+                <p>Nossas certificações garantem a máxima confiança e transparência</p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Oscip Certificada</h3>
+                        <p class="cert-details">
+                            Organização da Sociedade Civil de Interesse Público certificada pelo Ministério da Justiça.
+                        </p>
+                        <div class="cert-info">
+                            <span class="cert-number">Nº 08.012.345.678/0001-90</span>
+                            <span class="cert-status valid">Válida até 2025</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Baixar Certificado
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Auditoria Ernst & Young</h3>
+                        <p class="cert-details">
+                            Auditoria externa independente realizada pela Ernst & Young Brasil.
+                        </p>
+                        <div class="cert-info">
+                            <span class="cert-number">Relatório EY-2024-AMZ-001</span>
+                            <span class="cert-status valid">Aprovado</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Baixar Relatório
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Selo Verde Amazônia</h3>
+                        <p class="cert-details">
+                            Certificação do Instituto Nacional de Pesquisas da Amazônia (INPA).
+                        </p>
+                        <div class="cert-info">
+                            <span class="cert-number">SV-INPA-2024-0892</span>
+                            <span class="cert-status valid">Renovado 2024</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Baixar Certificado
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Certificação Internacional</h3>
+                        <p class="cert-details">
+                            Membro da Global Forest Alliance e certificado pela FSC Internacional.
+                        </p>
+                        <div class="cert-info">
+                            <span class="cert-number">GFA-BRA-2024-AMZ</span>
+                            <span class="cert-status valid">Membro Ativo</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Baixar Certificado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Tracking -->
+    <section class="donation-tracking">
+        <div class="container">
+            <div class="tracking-header">
+                <h2>Rastreamento de Doações</h2>
+                <p>Digite o código da sua doação para acompanhar o destino dos recursos</p>
+            </div>
+
+            <div class="tracking-form">
+                <div class="form-group">
+                    <input type="text" id="donation-code" placeholder="Digite o código da sua doação (ex: AMZ20241215001)" class="form-control">
+                    <button type="button" class="btn btn-primary" id="track-donation">
+                        <i class="fas fa-search"></i> Rastrear Doação
+                    </button>
+                </div>
+            </div>
+
+            <div class="tracking-result" id="tracking-result" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h3>Doação Encontrada!</h3>
+                        <span class="donation-id">AMZ20241215001</span>
+                    </div>
+                    
+                    <div class="result-content">
+                        <div class="donation-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span><strong>Data:</strong> 15 de dezembro de 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span><strong>Valor:</strong> R$ 150,00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Doador:</strong> João S. (Dados Protegidos)</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-seedling"></i>
+                                <span><strong>Projeto Destino:</strong> Reflorestamento Rio Negro</span>
+                            </div>
+                        </div>
+
+                        <div class="impact-details">
+                            <h4>Seu Impacto:</h4>
+                            <div class="impact-grid">
+                                <div class="impact-item">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>15 mudas plantadas</span>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>75 m² reflorestados</span>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>3 famílias beneficiadas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i> Baixar Certificado Atualizado
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-images"></i> Ver Fotos do Progresso
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="transparency-faq">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Perguntas Frequentes sobre Transparência</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como posso ter certeza de que minha doação está sendo bem utilizada?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oferecemos rastreamento completo de cada doação através do código único. Além disso, publicamos relatórios mensais detalhados e somos auditados por empresa externa independente. Você pode acompanhar o progresso dos projetos em tempo real através do nosso dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual percentual das doações vai para custos administrativos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Mantemos nossos custos operacionais em apenas 9% do total arrecadado, significativamente abaixo da média do setor (que é de 15-20%). Isso significa que 91% da sua doação vai diretamente para os projetos de preservação da Amazônia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Vocês são auditados por empresa externa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, somos auditados anualmente pela Ernst & Young Brasil, uma das maiores empresas de auditoria do mundo. Todos os relatórios de auditoria são públicos e podem ser baixados gratuitamente em nossa seção de certificações.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como posso acessar os relatórios financeiros detalhados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Todos os nossos relatórios mensais estão disponíveis gratuitamente nesta página. Você pode baixar os PDFs completos ou visualizar os dados no nosso dashboard interativo. Não exigimos cadastro ou login para acesso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso visitar os projetos pessoalmente?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Organizamos visitas guiadas trimestrais para doadores que contribuíram com R$ 500 ou mais no ano. Entre em contato conosco para agendar sua visita e conhecer de perto o impacto do seu apoio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Receba Relatórios de Transparência</h3>
+                    <p>Cadastre-se para receber nossos relatórios mensais diretamente no seu e-mail.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Receber Relatórios</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo.svg" alt="AmazôniaSalva" class="footer-logo">
+                        <span class="brand-text">AmazôniaSalva</span>
+                    </div>
+                    <p class="footer-description">
+                        Preservando a Amazônia com transparência e impacto real. 
+                        Cada doação faz a diferença para o futuro do planeta.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Apoio</h3>
+                    <ul class="footer-links">
+                        <li><a href="doacoes-completa.html">Como Doar</a></li>
+                        <li><a href="#">Seja Voluntário</a></li>
+                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html">Termos de Uso</a></li>
+                        <li><a href="transparencia.html">Relatórios Financeiros</a></li>
+                        <li><a href="#">Certificações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AmazôniaSalva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Funcionalidade específica da página de transparência
+        document.addEventListener('DOMContentLoaded', function() {
+            initPeriodSelector();
+            initDonationTracking();
+            initFAQAccordion();
+        });
+
+        function initPeriodSelector() {
+            const periodBtns = document.querySelectorAll('.period-btn');
+            
+            periodBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    periodBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const period = this.dataset.period;
+                    updateDashboard(period);
+                });
+            });
+        }
+
+        function updateDashboard(period) {
+            // Simular atualização dos dados do dashboard
+            showNotification(`Dashboard atualizado para ${period}! 📊`, 'info');
+        }
+
+        function initDonationTracking() {
+            const trackBtn = document.getElementById('track-donation');
+            const codeInput = document.getElementById('donation-code');
+            const result = document.getElementById('tracking-result');
+
+            trackBtn.addEventListener('click', function() {
+                const code = codeInput.value.trim();
+                
+                if (!code) {
+                    showNotification('Digite o código da sua doação para rastrear', 'warning');
+                    return;
+                }
+
+                // Simular busca
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Buscando...';
+                
+                setTimeout(() => {
+                    if (code.length >= 10) {
+                        result.style.display = 'block';
+                        result.scrollIntoView({ behavior: 'smooth' });
+                        showNotification('Doação encontrada! ✅', 'success');
+                    } else {
+                        showNotification('Código não encontrado. Verifique e tente novamente.', 'error');
+                    }
+                    
+                    this.innerHTML = '<i class="fas fa-search"></i> Rastrear Doação';
+                }, 1500);
+            });
+
+            codeInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    trackBtn.click();
+                }
+            });
+        }
+
+        function initFAQAccordion() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+
+                question.addEventListener('click', function() {
+                    const isOpen = answer.style.display === 'block';
+                    
+                    // Fechar todos
+                    faqItems.forEach(faq => {
+                        faq.querySelector('.faq-answer').style.display = 'none';
+                        faq.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+                    });
+
+                    // Abrir o clicado se estava fechado
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AmazôniaSalva | Notícias e Educação Ambiental</title>
+    <meta name="description" content="Fique por dentro das últimas notícias sobre preservação da Amazônia, educação ambiental e histórias de impacto dos nossos projetos.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/logo.svg" alt="AmazôniaSalva" class="nav-logo">
+                    <span class="brand-text">AmazôniaSalva</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como Funciona</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="doacoes-completa.html" class="btn btn-primary">Doe Agora</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Blog AmazôniaSalva</h1>
+            <p class="page-hero-subtitle">
+                Educação ambiental, notícias e histórias inspiradoras sobre a preservação da Amazônia
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="images/blog-featured-post.jpg" alt="Desmatamento na Amazônia cai 30% em 2024">
+                    <div class="featured-badge">Destaque</div>
+                </div>
+                <div class="featured-content">
+                    <div class="featured-meta">
+                        <span class="category sustainability">Sustentabilidade</span>
+                        <span class="date">22 de dezembro, 2024</span>
+                        <span class="read-time">5 min de leitura</span>
+                    </div>
+                    <h2>Desmatamento na Amazônia cai 30% em 2024: O impacto das nossas ações</h2>
+                    <p class="featured-excerpt">
+                        Dados do INPE revelam redução significativa no desmatamento. Conheça como os projetos 
+                        apoiados por doadores como você estão fazendo a diferença na preservação da floresta 
+                        mais importante do planeta.
+                    </p>
+                    <div class="featured-stats">
+                        <div class="stat">
+                            <i class="fas fa-chart-line"></i>
+                            <span>-30% desmatamento</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-seedling"></i>
+                            <span>+15k hectares preservados</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>200 famílias envolvidas</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Ler artigo completo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filters-header">
+                <h2>Explore nossos artigos</h2>
+                <div class="blog-search">
+                    <input type="search" placeholder="Buscar artigos..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="noticias">Notícias</button>
+                <button class="filter-btn" data-category="educacao">Educação</button>
+                <button class="filter-btn" data-category="impacto">Histórias de Impacto</button>
+                <button class="filter-btn" data-category="sustentabilidade">Sustentabilidade</button>
+                <button class="filter-btn" data-category="comunidades">Comunidades</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-results">
+                <p><span id="posts-count">12</span> artigos encontrados</p>
+                <div class="sort-options">
+                    <label>Ordenar por:</label>
+                    <select class="sort-select">
+                        <option value="newest">Mais Recentes</option>
+                        <option value="oldest">Mais Antigos</option>
+                        <option value="popular">Mais Populares</option>
+                        <option value="trending">Em Alta</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="posts-grid">
+                <!-- Post 1: Educação Ambiental -->
+                <article class="post-card" data-category="educacao">
+                    <div class="post-image">
+                        <img src="images/blog-educacao-criancas.jpg" alt="Como ensinar sustentabilidade para crianças">
+                        <div class="post-category education">Educação</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Ana Silva
+                            </span>
+                            <span class="date">18 de dezembro, 2024</span>
+                            <span class="read-time">8 min</span>
+                        </div>
+                        <h3>Como ensinar sustentabilidade para crianças de forma divertida</h3>
+                        <p class="post-excerpt">
+                            Descubra 10 atividades práticas e jogos educativos para ensinar crianças sobre 
+                            meio ambiente e preservação da Amazônia de maneira lúdica e envolvente.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Educação Infantil</span>
+                            <span class="tag">Sustentabilidade</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1.2k</span>
+                                <span><i class="fas fa-heart"></i> 89</span>
+                                <span><i class="fas fa-share"></i> 23</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2: História de Impacto -->
+                <article class="post-card" data-category="impacto">
+                    <div class="post-image">
+                        <img src="images/blog-comunidade-kayapo.jpg" alt="História de sucesso da comunidade Kayapó">
+                        <div class="post-category impact">Impacto</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Carlos Mendes
+                            </span>
+                            <span class="date">15 de dezembro, 2024</span>
+                            <span class="read-time">6 min</span>
+                        </div>
+                        <h3>De volta às raízes: Como a comunidade Kayapó recuperou 500 hectares</h3>
+                        <p class="post-excerpt">
+                            A emocionante jornada da comunidade indígena Kayapó que, com apoio de doadores, 
+                            conseguiu reflorestal uma área equivalente a 700 campos de futebol.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Reflorestamento</span>
+                            <span class="tag">Indígenas</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 2.1k</span>
+                                <span><i class="fas fa-heart"></i> 156</span>
+                                <span><i class="fas fa-share"></i> 45</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3: Notícias -->
+                <article class="post-card" data-category="noticias">
+                    <div class="post-image">
+                        <img src="images/blog-nova-especie.jpg" alt="Nova espécie descoberta na Amazônia">
+                        <div class="post-category news">Notícias</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Dr. Maria Santos
+                            </span>
+                            <span class="date">12 de dezembro, 2024</span>
+                            <span class="read-time">4 min</span>
+                        </div>
+                        <h3>Nova espécie de macaco descoberta em área protegida por nossos projetos</h3>
+                        <p class="post-excerpt">
+                            Pesquisadores descobrem uma nova espécie de macaco na região onde atuamos. 
+                            A descoberta reforça a importância da preservação e biodiversidade amazônica.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Biodiversidade</span>
+                            <span class="tag">Descoberta</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 3.5k</span>
+                                <span><i class="fas fa-heart"></i> 298</span>
+                                <span class="fas fa-share"></i> 87</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4: Sustentabilidade -->
+                <article class="post-card" data-category="sustentabilidade">
+                    <div class="post-image">
+                        <img src="images/blog-carbono-zero.jpg" alt="Guia para zerar sua pegada de carbono">
+                        <div class="post-category sustainability">Sustentabilidade</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                João Rodrigues
+                            </span>
+                            <span class="date">10 de dezembro, 2024</span>
+                            <span class="read-time">10 min</span>
+                        </div>
+                        <h3>Guia prático: Como zerar sua pegada de carbono em 2025</h3>
+                        <p class="post-excerpt">
+                            Um guia completo com ações práticas para reduzir seu impacto ambiental, 
+                            desde mudanças simples no dia a dia até investimentos em projetos verdes.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Pegada de Carbono</span>
+                            <span class="tag">Dicas Práticas</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 4.2k</span>
+                                <span><i class="fas fa-heart"></i> 321</span>
+                                <span><i class="fas fa-share"></i> 112</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 5: Comunidades -->
+                <article class="post-card" data-category="comunidades">
+                    <div class="post-image">
+                        <img src="images/blog-mulheres-amazonia.jpg" alt="Protagonismo feminino na preservação">
+                        <div class="post-category community">Comunidades</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Lucia Ferreira
+                            </span>
+                            <span class="date">8 de dezembro, 2024</span>
+                            <span class="read-time">7 min</span>
+                        </div>
+                        <h3>O protagonismo das mulheres na preservação da Amazônia</h3>
+                        <p class="post-excerpt">
+                            Conheça histórias inspiradoras de mulheres líderes que estão na linha de frente 
+                            da conservação amazônica, transformando suas comunidades e famílias.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Mulheres</span>
+                            <span class="tag">Liderança</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1.8k</span>
+                                <span><i class="fas fa-heart"></i> 142</span>
+                                <span><i class="fas fa-share"></i> 38</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 6: Educação -->
+                <article class="post-card" data-category="educacao">
+                    <div class="post-image">
+                        <img src="images/blog-tecnologia-verde.jpg" alt="Tecnologia a favor da natureza">
+                        <div class="post-category education">Educação</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Tech Team
+                            </span>
+                            <span class="date">5 de dezembro, 2024</span>
+                            <span class="read-time">9 min</span>
+                        </div>
+                        <h3>Como a tecnologia está revolucionando a conservação amazônica</h3>
+                        <p class="post-excerpt">
+                            Drones, inteligência artificial e sensores IoT: descubra as tecnologias que 
+                            estamos usando para monitorar e proteger a Amazônia em tempo real.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Tecnologia</span>
+                            <span class="tag">Monitoramento</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 2.7k</span>
+                                <span><i class="fas fa-heart"></i> 203</span>
+                                <span><i class="fas fa-share"></i> 67</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 7: Impacto -->
+                <article class="post-card" data-category="impacto">
+                    <div class="post-image">
+                        <img src="images/blog-antes-depois.jpg" alt="Transformação de área degradada">
+                        <div class="post-category impact">Impacto</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Equipe de Campo
+                            </span>
+                            <span class="date">3 de dezembro, 2024</span>
+                            <span class="read-time">5 min</span>
+                        </div>
+                        <h3>Antes e depois: A incrível transformação em 2 anos de trabalho</h3>
+                        <p class="post-excerpt">
+                            Fotos impressionantes mostram como uma área completamente degradada se 
+                            transformou numa floresta exuberante em apenas 24 meses de reflorestamento.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Transformação</span>
+                            <span class="tag">Reflorestamento</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 5.1k</span>
+                                <span><i class="fas fa-heart"></i> 412</span>
+                                <span><i class="fas fa-share"></i> 189</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 8: Notícias -->
+                <article class="post-card" data-category="noticias">
+                    <div class="post-image">
+                        <img src="images/blog-parceria-governo.jpg" alt="Nova parceria com o governo">
+                        <div class="post-category news">Notícias</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Assessoria
+                            </span>
+                            <span class="date">1 de dezembro, 2024</span>
+                            <span class="read-time">3 min</span>
+                        </div>
+                        <h3>AmazôniaSalva firma parceria histórica com governo do Amazonas</h3>
+                        <p class="post-excerpt">
+                            Novo acordo permitirá ampliar projetos de preservação em 50% e criar 300 
+                            novos empregos verdes na região amazônica nos próximos 3 anos.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Parceria</span>
+                            <span class="tag">Governo</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 3.8k</span>
+                                <span><i class="fas fa-heart"></i> 267</span>
+                                <span><i class="fas fa-share"></i> 95</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 9: Sustentabilidade -->
+                <article class="post-card" data-category="sustentabilidade">
+                    <div class="post-image">
+                        <img src="images/blog-economia-verde.jpg" alt="Economia verde na Amazônia">
+                        <div class="post-category sustainability">Sustentabilidade</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                Prof. Roberto Lima
+                            </span>
+                            <span class="date">28 de novembro, 2024</span>
+                            <span class="read-time">12 min</span>
+                        </div>
+                        <h3>Economia verde: Como a Amazônia pode ser mais valiosa em pé</h3>
+                        <p class="post-excerpt">
+                            Análise econômica mostra que atividades sustentáveis podem gerar 3x mais 
+                            valor que o desmatamento, criando um modelo de desenvolvimento próspero.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Economia Verde</span>
+                            <span class="tag">Desenvolvimento</span>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#" class="read-more">Ler mais</a>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 2.9k</span>
+                                <span><i class="fas fa-heart"></i> 178</span>
+                                <span><i class="fas fa-share"></i> 54</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-section">
+                <button class="btn btn-outline btn-large" id="load-more-posts">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais Artigos
+                </button>
+                <p class="load-more-text">Mostrando 9 de 47 artigos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="blog-newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="newsletter-content">
+                    <h3>Receba nossa newsletter semanal</h3>
+                    <p>Fique por dentro das últimas notícias sobre preservação ambiental e histórias inspiradoras dos nossos projetos.</p>
+                    
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </form>
+                    
+                    <div class="newsletter-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Conteúdo exclusivo toda semana</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Histórias em primeira mão</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Dicas de sustentabilidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tags -->
+    <section class="popular-tags">
+        <div class="container">
+            <h3>Tags Populares</h3>
+            <div class="tags-cloud">
+                <a href="#" class="tag-link" data-tag="reflorestamento">Reflorestamento</a>
+                <a href="#" class="tag-link" data-tag="biodiversidade">Biodiversidade</a>
+                <a href="#" class="tag-link" data-tag="sustentabilidade">Sustentabilidade</a>
+                <a href="#" class="tag-link" data-tag="comunidades">Comunidades</a>
+                <a href="#" class="tag-link" data-tag="educacao-ambiental">Educação Ambiental</a>
+                <a href="#" class="tag-link" data-tag="tecnologia">Tecnologia</a>
+                <a href="#" class="tag-link" data-tag="mudancas-climaticas">Mudanças Climáticas</a>
+                <a href="#" class="tag-link" data-tag="indigenas">Povos Indígenas</a>
+                <a href="#" class="tag-link" data-tag="economia-verde">Economia Verde</a>
+                <a href="#" class="tag-link" data-tag="carbono-zero">Carbono Zero</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo.svg" alt="AmazôniaSalva" class="footer-logo">
+                        <span class="brand-text">AmazôniaSalva</span>
+                    </div>
+                    <p class="footer-description">
+                        Preservando a Amazônia com transparência e impacto real. 
+                        Cada doação faz a diferença para o futuro do planeta.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Apoio</h3>
+                    <ul class="footer-links">
+                        <li><a href="doacoes-completa.html">Como Doar</a></li>
+                        <li><a href="#">Seja Voluntário</a></li>
+                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html">Termos de Uso</a></li>
+                        <li><a href="transparencia.html">Relatórios Financeiros</a></li>
+                        <li><a href="#">Certificações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AmazôniaSalva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Funcionalidade específica da página do blog
+        document.addEventListener('DOMContentLoaded', function() {
+            initBlogFilters();
+            initBlogSearch();
+            initLoadMorePosts();
+            initPopularTags();
+        });
+
+        function initBlogFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const postCards = document.querySelectorAll('.post-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const category = this.dataset.category;
+                    
+                    // Filter posts
+                    let visibleCount = 0;
+                    postCards.forEach(card => {
+                        const shouldShow = category === 'all' || card.dataset.category === category;
+                        card.style.display = shouldShow ? 'block' : 'none';
+                        if (shouldShow) visibleCount++;
+                    });
+
+                    // Update count
+                    document.getElementById('posts-count').textContent = visibleCount;
+                    
+                    // Show filter notification
+                    const categoryName = category === 'all' ? 'Todos os artigos' : this.textContent;
+                    showNotification(`Filtrado por: ${categoryName} 📄`, 'info');
+                });
+            });
+        }
+
+        function initBlogSearch() {
+            const searchInput = document.querySelector('.blog-search .search-input');
+            const postCards = document.querySelectorAll('.post-card');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let visibleCount = 0;
+
+                postCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.post-excerpt').textContent.toLowerCase();
+                    const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+                    
+                    const shouldShow = title.includes(searchTerm) || excerpt.includes(searchTerm) || tags.includes(searchTerm);
+                    
+                    card.style.display = shouldShow ? 'block' : 'none';
+                    if (shouldShow) visibleCount++;
+                });
+
+                document.getElementById('posts-count').textContent = visibleCount;
+
+                if (searchTerm && visibleCount === 0) {
+                    showNotification('Nenhum artigo encontrado para sua busca 🔍', 'warning');
+                }
+            });
+        }
+
+        function initLoadMorePosts() {
+            const loadMoreBtn = document.getElementById('load-more-posts');
+            
+            loadMoreBtn.addEventListener('click', function() {
+                // Simulate loading more posts
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+                
+                setTimeout(() => {
+                    showNotification('Mais artigos carregados! 📚', 'success');
+                    this.innerHTML = '<i class="fas fa-plus"></i> Carregar Mais Artigos';
+                    
+                    // Update counter
+                    const currentCount = parseInt(document.querySelector('.load-more-text').textContent.match(/\d+/)[0]);
+                    document.querySelector('.load-more-text').textContent = `Mostrando ${currentCount + 6} de 47 artigos`;
+                }, 1500);
+            });
+        }
+
+        function initPopularTags() {
+            const tagLinks = document.querySelectorAll('.tag-link');
+            
+            tagLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const tag = this.dataset.tag || this.textContent.toLowerCase();
+                    
+                    // Highlight clicked tag
+                    tagLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter posts by tag (simplified version)
+                    const searchInput = document.querySelector('.blog-search .search-input');
+                    searchInput.value = this.textContent;
+                    searchInput.dispatchEvent(new Event('input'));
+                    
+                    // Scroll to posts
+                    document.querySelector('.blog-posts').scrollIntoView({ behavior: 'smooth' });
+                    
+                    showNotification(`Artigos sobre: ${this.textContent} 🏷️`, 'info');
+                });
+            });
+        }
+
+        // Social sharing functionality
+        function sharePost(platform, title, url) {
+            const shareUrls = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                twitter: `https://twitter.com/intent/tweet?text=${title}&url=${url}`,
+                linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+                whatsapp: `https://wa.me/?text=${title} ${url}`
+            };
+            
+            if (shareUrls[platform]) {
+                window.open(shareUrls[platform], '_blank', 'width=600,height=400');
+            }
+        }
+    </script>
+</body>
+</html>
